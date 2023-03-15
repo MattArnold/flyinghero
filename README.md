@@ -1,0 +1,1 @@
+A WebVR game similar to Breakout, in 3D, using the A-Frame framework. The boundary of the game will be a cube. The player and the ball are inside the cube. The paddle will be the controller that the player is holding. The paddle will also be shaped like a flying hero.
