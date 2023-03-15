@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const cubeEl = document.createElement("a-box");
   cubeEl.setAttribute("id", "cube");
   cubeEl.setAttribute("position", "0 1.6 0");
-  cubeEl.setAttribute("width", "15");
-  cubeEl.setAttribute("height", "15");
-  cubeEl.setAttribute("depth", "15");
+  cubeEl.setAttribute("width", "10");
+  cubeEl.setAttribute("height", "10");
+  cubeEl.setAttribute("depth", "10");
   cubeEl.setAttribute("color", "blue");
-  cubeEl.setAttribute("wireframe", "true");
+  cubeEl.setAttribute("material", "side: double");
   gameEl.appendChild(cubeEl);
 
   // Create the paddle
