@@ -1,8 +1,12 @@
 AFRAME.registerComponent("ball-animation", {
-  tick: function (time, timeDelta) {
-    const ballEl = document.querySelector("#ball");
+  init: function () {
+    this.paddleEl = document.querySelector("#paddle");
+    this.ballEl = document.querySelector("#ball");
+    this.cubeEl = document.querySelector("#cube");
+  },
 
-    if (!ballEl) {
+  tick: function (time, timeDelta) {
+    if (!ballEl || !this.paddleEl || !this.cubeEl) {
       return;
     }
 
