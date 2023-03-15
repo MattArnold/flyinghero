@@ -1,41 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const sceneEl = document.querySelector("a-scene");
-  const gameEl = document.querySelector("#game");
+AFRAME.registerComponent("ball-animation", {
+  tick: function (time, timeDelta) {
+    const ballEl = document.querySelector("#ball");
 
-  // Create the cube
-  const cubeEl = document.createElement("a-box");
-  cubeEl.setAttribute("id", "cube");
-  cubeEl.setAttribute("position", "0 1.6 0");
-  cubeEl.setAttribute("width", "10");
-  cubeEl.setAttribute("height", "10");
-  cubeEl.setAttribute("depth", "10");
-  cubeEl.setAttribute("color", "blue");
-  cubeEl.setAttribute("material", "side: double");
-  gameEl.appendChild(cubeEl);
+    if (!ballEl) {
+      return;
+    }
 
-  // Create the paddle
-  const paddleEl = document.createElement("a-entity");
-  paddleEl.setAttribute("id", "paddle");
-  paddleEl.setAttribute("position", "0 1.6 -0.5");
-  paddleEl.setAttribute("gltf-model", "./Flyinghero_2023-03-14.gltf");
-  gameEl.appendChild(paddleEl);
-
-  // Create the ball
-  const ballEl = document.createElement("a-sphere");
-  ballEl.setAttribute("id", "ball");
-  ballEl.setAttribute("position", "0 1.6 -1.5");
-  ballEl.setAttribute("radius", "0.05");
-  ballEl.setAttribute("color", "yellow");
-  gameEl.appendChild(ballEl);
-
-  // Add the ball-animation component
-  ballEl.setAttribute("ball-animation", "");
-
-  // Ball velocity
-  const ballVelocity = { x: 0.0025, y: 0.0025, z: -0.0025 };
-
-  // Animate the ball
-  function animateBall() {
     const ballPos = ballEl.object3D.position;
     const paddlePos = paddleEl.object3D.position;
     const cubePos = cubeEl.object3D.position;
@@ -91,21 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Continue animation
     requestAnimationFrame(animateBall);
-  }
 
-  // Start ball animation
-  animateBall();
-
-  // Camera and controller
-  const rigEl = document.querySelector("#rig");
-  const controllerEl = document.createElement("a-entity");
-  controllerEl.setAttribute("laser-controls", "hand: right");
-  controllerEl.setAttribute("raycaster", "objects: .collidable");
-  controllerEl.setAttribute("line", "color: red; opacity: 0.75");
-  rigEl.appendChild(controllerEl);
-
-  // Attach the paddle to the controller
-  controllerEl.appendChild(paddleEl);
-
+  },
 });
-``;
