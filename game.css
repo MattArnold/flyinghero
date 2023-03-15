@@ -1,0 +1,4 @@
+html:not(.a-fullscreen) .a-enter-ar, html:not(.a-fullscreen) .a-enter-vr {
+    right: 0rem;
+    bottom: -5rem;
+}
