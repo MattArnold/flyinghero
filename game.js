@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const paddleEl = document.createElement("a-entity");
   paddleEl.setAttribute("id", "paddle");
   paddleEl.setAttribute("position", "0 1.6 -0.5");
-  paddleEl.setAttribute("gltf-model", "./Flyinghero_2023-03-01_23.49.17.gltf");
+  paddleEl.setAttribute("gltf-model", "./Flyinghero_2023-03-14.gltf");
   gameEl.appendChild(paddleEl);
 
   // Create the ball
