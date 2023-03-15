@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Create the cube
   const cubeEl = document.createElement("a-box");
   cubeEl.setAttribute("id", "cube");
-  cubeEl.setAttribute("position", "0 1.6 -2");
+  cubeEl.setAttribute("position", "0 1.6 0");
   cubeEl.setAttribute("width", "1");
   cubeEl.setAttribute("height", "1");
   cubeEl.setAttribute("depth", "1");
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Create the paddle
   const paddleEl = document.createElement("a-entity");
   paddleEl.setAttribute("id", "paddle");
-  paddleEl.setAttribute("position", "0 1.6 -1");
+  paddleEl.setAttribute("position", "0 1.6 -0.5");
   paddleEl.setAttribute("gltf-model", "./Flyinghero_2023-03-01_23.49.17.gltf");
   gameEl.appendChild(paddleEl);
 
