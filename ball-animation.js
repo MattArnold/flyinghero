@@ -6,7 +6,7 @@ AFRAME.registerComponent("ball-animation", {
   },
 
   tick: function (time, timeDelta) {
-    if (!ballEl || !this.paddleEl || !this.cubeEl) {
+    if (!this.ballEl || !this.paddleEl || !this.cubeEl) {
       return;
     }
 
