@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const cubeEl = document.createElement("a-box");
   cubeEl.setAttribute("id", "cube");
   cubeEl.setAttribute("position", "0 1.6 0");
-  cubeEl.setAttribute("width", "1");
-  cubeEl.setAttribute("height", "1");
-  cubeEl.setAttribute("depth", "1");
+  cubeEl.setAttribute("width", "15");
+  cubeEl.setAttribute("height", "15");
+  cubeEl.setAttribute("depth", "15");
   cubeEl.setAttribute("color", "blue");
   cubeEl.setAttribute("wireframe", "true");
   gameEl.appendChild(cubeEl);
