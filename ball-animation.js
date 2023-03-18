@@ -10,6 +10,10 @@ AFRAME.registerComponent("ball-animation", {
       return;
     }
 
+    const ballEl = this.ballEl;
+    const paddleEl = this.paddleEl;
+    const cubeEl = this.cubeEl;
+
     const ballPos = ballEl.object3D.position;
     const paddlePos = paddleEl.object3D.position;
     const cubePos = cubeEl.object3D.position;
